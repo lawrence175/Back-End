@@ -1,0 +1,66 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 15, 2016 at 01:22 PM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `register`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `trn_date` datetime NOT NULL,
+  `telephone` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `trn_date`, `telephone`) VALUES
+(1, 'lawrence', 'lawrence.kisembo@student.utamu.ac.ug', '7e60bc642fefc11b43792e8745df6c1d', '2016-05-20 13:03:23', NULL),
+(2, 'lawrence', 'sembolawrence@gmail.com', '07312e613938e243bba04f4f78ed7097', '2016-05-20 15:19:17', NULL),
+(3, 'robert', 'lawrence.kisembo@student.utamu.ac.ug', '7e60bc642fefc11b43792e8745df6c1d', '2016-05-22 17:49:22', NULL),
+(4, 'saiba', 'saiba67@yahoo.com', 'bc4878bd08a7c8d33d1fbcdb48eff534', '2016-05-27 09:00:46', NULL),
+(5, 'saiba', 'saiba67@yahoo.com', 'bc4878bd08a7c8d33d1fbcdb48eff534', '2016-05-27 09:00:47', NULL),
+(6, 'cyber', 'cyber@yahoo.com', '7e60bc642fefc11b43792e8745df6c1d', '2016-05-27 09:02:17', NULL),
+(7, 'atwine aggrey', 'atwineggry@yahoo.com', '683e5360a26433894f8b0b4a0c242068', '2016-05-27 10:02:39', NULL),
+(8, 'Tryphine', 'tryphean22@gmail.com', '9a97eda6d89f5c9e84560468a0679707', '2016-06-02 11:31:50', NULL),
+(9, 'Tryphine', 'tryphean22@gmail.com', 'ea1d9f3aa9b105b6f30e95900b9222b4', '2016-06-06 13:36:32', NULL),
+(11, 'Tryphean', 'tryphean33@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '2016-07-28 11:16:57', NULL),
+(12, 'Tryphean', 'tryphean33@gmail.com', 'ab20ba80cdc66f1c460a43b74aa52bf0', '2016-07-28 11:18:47', NULL),
+(13, 'Tryphean', 'tryphean33@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '2016-07-28 11:19:37', NULL),
+(14, 'rich', 'lawrencecyber@yahoo.com', '7d8949bcbf85067fceda9f84a6affb6b', '2016-07-28 11:21:17', NULL),
+(15, 'phean', 'tryphean22@gmail.com', '39c63ddb96a31b9610cd976b896ad4f0', '2016-07-28 11:22:15', NULL),
+(16, 'ubuntu', 'ubuntu@yahoo.com', '7e60bc642fefc11b43792e8745df6c1d', '2016-08-03 13:27:06', NULL),
+(19, 'willingtone', 'willy@gmail.com', '7d8949bcbf85067fceda9f84a6affb6b', '2016-08-03 13:41:08', '788581891'),
+(21, 'rebecca', 'rebecca@gmail.com', '7e60bc642fefc11b43792e8745df6c1d', '2016-08-03 13:45:02', '0788581851'),
+(22, 'mary', 'mary@gmail.com', '7e60bc642fefc11b43792e8745df6c1d', '2016-08-15 11:07:26', '0445555555'),
+(23, 'okello', 'okellopeter@gmail.com', '7e60bc642fefc11b43792e8745df6c1d', '2016-08-24 00:07:07', '0788581851');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
