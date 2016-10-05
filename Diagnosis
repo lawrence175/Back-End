@@ -1,0 +1,109 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 15, 2016 at 01:22 PM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `diagnosis`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `disease`
+--
+
+CREATE TABLE IF NOT EXISTS `disease` (
+  `id` int(20) NOT NULL,
+  `d_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `disease`
+--
+
+INSERT INTO `disease` (`id`, `d_name`) VALUES
+(1, 'Malaria'),
+(2, 'Tuberculosis'),
+(3, 'Yellow fever'),
+(4, 'Typhoid'),
+(5, 'Hepatitis'),
+(1, 'Malaria'),
+(2, 'Tuberculosis'),
+(3, 'Yellow fever'),
+(4, 'Typhoid'),
+(5, 'Hepatitis');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `diseasesymptom`
+--
+
+CREATE TABLE IF NOT EXISTS `diseasesymptom` (
+  `id` int(15) NOT NULL,
+  `d_id` int(20) NOT NULL,
+  `s_id` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `diseasesymptom`
+--
+
+INSERT INTO `diseasesymptom` (`id`, `d_id`, `s_id`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 8),
+(4, 1, 9),
+(5, 1, 10),
+(6, 2, 3),
+(7, 2, 4),
+(8, 2, 5),
+(9, 2, 6),
+(10, 2, 7),
+(11, 2, 2),
+(12, 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `symptoms`
+--
+
+CREATE TABLE IF NOT EXISTS `symptoms` (
+  `id` int(12) NOT NULL,
+  `s_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `symptoms`
+--
+
+INSERT INTO `symptoms` (`id`, `s_name`) VALUES
+(1, 'loss of appetite'),
+(2, 'fever'),
+(3, 'headache'),
+(4, 'vomiting'),
+(5, 'muscle'),
+(6, 'diarrhea'),
+(7, 'anemia'),
+(8, 'fatigue'),
+(9, 'night sweats'),
+(10, 'loss of weight');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
